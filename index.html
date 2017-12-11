@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<title>Out of This World Designs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="CSS/Style_sheet_1.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-gray" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="html/photography.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Photography</a>
+    <a href="html/portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Portfolio</a>
+    <a href="html/contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="html/photography.html" class="w3-bar-item w3-button w3-padding-large">Photography</a>
+    <a href="html/portfolio.html" class="w3-bar-item w3-button w3-padding-large">Portfolio</a>
+    <a href="html/contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center" style="background: #111;">
+  <div class="canvas">
+    <div class="streak"></div>
+    <h1 class="w3-margin w3-jumbo out-of-world">OUT OF THIS WORLD DESIGNS</h1>
+    <p class="w3-xlarge">Print and Business Branding Design</p>
+  <div>
+</header>
+
+<!-- First Grid: About Me -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1><strong>About Me</strong></h1>
+      <h5 class="w3-padding-32">Graphic Designer focusing on print media and helping you to brand your business.</h5>
+
+      <p class="w3-text-grey">Full time studen at UCONN Stamford. Working in the field of Digital Media and Design. I specialize in print media such as: posters, invitations, newletters, brochures, etc. I can also help you brand your business with special work such as: logo design, creating busniess cards, letter heads, pamphlets, company shirts, and more.</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src="Pictures/logo.png" width="100%" style="padding-right: 50px;"/>
+    </div>
+
+    <div class="w3-twothird">
+      <h1><strong>My Logo Design</strong></h1>
+      <h5 class="w3-padding-32">Personal Inspiration for my self branding. </h5>
+
+      <p class="w3-text-grey">As a kid, I would lay in field and look up into the stars. Whenever a plane would fly over, my young mind would be convinced that it was aliens in UFOs. Later on in life, I got my first tattoo; a custom designed alien and spaceship in a galaxy, created by my best friend. It reflects my quirky personality and my wild imagination.</p>
+    </div>
+  </div>
+
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1><strong>My Skills and Programs Used</strong></h1>
+      <img src="Pictures/photoshop.png" width="40%" style="padding: 30px;"/> <img src="Pictures/adobe_cloud.png" width="40%" style="padding: 40px"/> <img src="Pictures/illustrator.png" width="40%" style="padding: 30px;"
+      <h5 class="w3-padding-32"></h5>
+
+      <p class="w3-text-grey"></p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img></i>
+    </div>
+  </div>
+</div>
+<div class="w3-container w3-black w3-center w3-padding-64" style="background: url(pictures/star_field.jpg) no-repeat center center; background-size: cover;">
+    <h1 class="w3-margin w3-xlarge">"They are always up in the stars watching."</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+$( function() {
+
+  console.log( 'loaded' );
+
+  var $canvas = $( '.canvas' ),
+      canvasWidth = $canvas.outerWidth(),
+      canvasHeight = $canvas.outerHeight();
+
+  starField();
+
+
+  function starField() {
+    var maxStars = 1000;
+    for( var i = 0; i < maxStars; i++ ) {
+      var elem = document.createElement( "div" );
+      var size = Math.floor( Math.random() * 4 + 1 );
+      $( elem ).addClass( 'star' );
+      $( elem ).css( {
+        left   : Math.floor( Math.random() * canvasWidth ),
+        top    : Math.floor( Math.random() * canvasHeight ),
+        opacity: Math.random(),
+        width  : size,
+        height : size
+      } );
+
+      $canvas.append( elem );
+    }
+    var $star = $( '.star' );
+    var stl = new TimelineMax( {yoyo: true} );
+    stl.add( TweenMax.staggerTo( $star.slice( 1, (maxStars / 10) ), .5, {
+      autoAlpha  : 0.25,
+      scale      : 0.25,
+      yoyo       : true,
+      repeat     : -1,
+      repeatDelay: 1,
+      ease       : Bounce.easeOut
+    }, 0.15 ) );
+  }
+
+  var $streak = $( '.streak' );
+
+  function shootingStar() {
+    var tl = new TimelineMax( { delay: Math.random() * 3 } ),
+        scale = (Math.random() * 3 + .5);
+    tl.set( $streak, { left: Math.random() * canvasWidth, top: 0, scale: 0 } )
+        .to( $streak, scale, { left: '-=250', top: '+=250', scale: scale, autoAlpha: 1, ease: SlowMo.easeOut } )
+        .to( $streak, scale, { left: '-=250', top: '+=250', scale: 0, autoAlpha: 0, ease: SlowMo.easeOut, onComplete: shootingStar }, '-=.4' );
+  }
+
+  shootingStar();
+
+} );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+$( function() {
+
+  console.log( 'loaded' );
+
+  var $canvas = $( '.canvas' ),
+      canvasWidth = $canvas.outerWidth(),
+      canvasHeight = $canvas.outerHeight();
+
+  starField();
+
+
+  function starField() {
+    var maxStars = 1000;
+    for( var i = 0; i < maxStars; i++ ) {
+      var elem = document.createElement( "div" );
+      var size = Math.floor( Math.random() * 4 + 1 );
+      $( elem ).addClass( 'star' );
+      $( elem ).css( {
+        left   : Math.floor( Math.random() * canvasWidth ),
+        top    : Math.floor( Math.random() * canvasHeight ),
+        opacity: Math.random(),
+        width  : size,
+        height : size
+      } );
+
+      $canvas.append( elem );
+    }
+    var $star = $( '.star' );
+    var stl = new TimelineMax( {yoyo: true} );
+    stl.add( TweenMax.staggerTo( $star.slice( 1, (maxStars / 10) ), .5, {
+      autoAlpha  : 0.25,
+      scale      : 0.25,
+      yoyo       : true,
+      repeat     : -1,
+      repeatDelay: 1,
+      ease       : Bounce.easeOut
+    }, 0.15 ) );
+  }
+
+  var $streak = $( '.streak' );
+
+  function shootingStar() {
+    var tl = new TimelineMax( { delay: Math.random() * 3 } ),
+        scale = (Math.random() * 3 + .5);
+    tl.set( $streak, { left: Math.random() * canvasWidth, top: 0, scale: 0 } )
+        .to( $streak, scale, { left: '-=250', top: '+=250', scale: scale, autoAlpha: 1, ease: SlowMo.easeOut } )
+        .to( $streak, scale, { left: '-=250', top: '+=250', scale: 0, autoAlpha: 0, ease: SlowMo.easeOut, onComplete: shootingStar }, '-=.4' );
+  }
+
+  shootingStar();
+
+} );
